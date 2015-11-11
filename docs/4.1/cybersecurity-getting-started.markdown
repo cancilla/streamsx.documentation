@@ -51,7 +51,8 @@ The following steps can be taken to download, compile and run the cybersecurity 
  <span class="output">DomainProfilingSamples  HostProfilingSamples  PredictiveBlacklistingSamples</span>
  </pre>
  
- 2. Navigate to the DomainProfilingSamples directory. The directory contains a build.xml file that will download any necessary dependencies (including the networking toolkit) and compile one of the applications. Run the `ant` command to kick off the build. 
+ 2. Navigate to the DomainProfilingSamples directory. The directory contains a build.xml file that will download any necessary dependencies (including the networking toolkit) and compile one of the applications. Run the `ant` command to kick off the build.
+ 
  <pre class="terminal">
  <span class="command">ant</span>
  </pre>
