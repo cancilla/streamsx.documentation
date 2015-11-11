@@ -45,27 +45,37 @@ The following steps can be taken to download, compile and run the cybersecurity 
  DomainProfilingSamples  HostProfilingSamples  PredictiveBlacklistingSamples
  ```
  
- 2. Navigate to the DomainProfilingSamples directory. The directory contains a build.xml file that will index the toolkit and download any necessary dependencies. Simply run `ant` to start the build.
-
-```
-$> ant 
-```
+ 2. Navigate to the DomainProfilingSamples directory. The directory contains a build.xml file that will download any necessary dependencies (including the networking toolkit) and compile one of the applications. Run the `ant` command to kick off the build. 
+ ```
+ $> ant 
+ ```
  
- 3. 
+ 3. Use the Streams Console to submit the application to the instance. To get the URL for the Streams Console, run the following command:
  
+ ```
+ $> st -d <domain_name> -i <instance_name> geturl
+ https://myhost:9222/streams/domain/console
+ ```
  
+ 4. Once the Streams Console is open, you should be presented with a screen that looks like the following: 
+ 
+ ***INSERT IMAGE OF STREAMS CONSOLE*** 
 
-The samples can be downloaded from the cybersecurity folder in the samples GitHub repository: [https://github.com/IBMStreams/samples/tree/master/cybersecurity].
-
-
-
-
-
-
-
-### Build
-
-### Run
+ 5. At the top of the Streams Console, click the "Submit Job" button. Select the *.sab file found in the 'output/' directory in the sample application. For example, for the DomainProfilingSample application, you would select this file: `/path/to/DomainProfilingSample/output/DomainProfilingBasic_Output/com.ibm.streams.cybersecurity.sample.DomainProfilingBasic.sab`
+ 
+ 6. Once the application has been submitted, the Streams Console should display the running application:
+ 
+ ***INSERT IMAGE OF STREAMS CONSOLE WITH APP RUNNING***
+ 
 
 ### Analyze Output
+The sample applications will output the results of the analytics to the data directory. There will be two files generated in this directory: 
 
+ - *suspicious.txt* - lists the domains that were classified as suspicious
+ - *benign.txt* - lists the domains that were classified as benign
+
+For the DomainProfilingBasic application, only the classified domains are written to the file. However, generally you will want to output additional information, such as the IP addresses of the hosts that accessed these domains. The 'DomainProfilingExtended' sample application demonstrates how to collect a set of the unique IPs that accessed the domain. 
+
+
+### Importing into Streams Studio
+The cybersecurity sample applications can be imported into Streams Studio as SPL Projects. When importanting the cybersecurity samples, you must add the **com.ibm.streamsx.network** toolkit location to Streams Explorer. If you are planning on using the PredictiveBlacklisting samples, you must add the **com.ibm.spss.streams.analytics** toolkit to Streams Explorer as well. 
