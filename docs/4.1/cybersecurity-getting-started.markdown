@@ -59,7 +59,7 @@ The following steps can be taken to download, compile and run the cybersecurity 
  3. Use the Streams Console to submit the application to the instance. To get the URL for the Streams Console, run the following command:
  
  <pre class="terminal">
- <pre class="command">st -d <em>[DOMAIN_NAME]</em> -i <em>[INSTANCE_NAME]</em> geturl</span>
+ <span class="command">st -d <em>[DOMAIN_NAME]</em> -i <em>[INSTANCE_NAME]</em> geturl</span>
  <span class="output">https://<em>myhost:9222</em>/streams/domain/console</span>
  </pre>
  
