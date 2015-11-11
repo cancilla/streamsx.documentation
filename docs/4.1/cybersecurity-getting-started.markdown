@@ -11,14 +11,14 @@ The Cybersecurity Toolkit provides operators that are capable of analyzing netwo
 
 In order to get started with using the Cybersecurity Toolkit, it is ***highly recommended*** that the sample applications be used as a baseline for building cybersecurity applications. In many cases, the analytics require that specific filters and enrichment be performed prior to being analyzed. The sample applications contain the necessary filters and enrichments to allow the analytics to work properly. 
 
-In order to use the cybersecurity toolkit, you must download and install the com.ibm.streamsx.network toolkit, found in the [streamsx.network|https://github.com/IBMStreams/streamsx.network] GitHub repository. The build.xml file contained in each of the sample applications will automatically download the latest release of the com.ibm.streamsx.network toolkit and place it in the same directory as the samples. 
+In order to use the cybersecurity toolkit, you must download and install the com.ibm.streamsx.network toolkit, found in the [streamsx.network](https://github.com/IBMStreams/streamsx.network) GitHub repository. The build.xml file contained in each of the sample applications will automatically download the latest release of the com.ibm.streamsx.network toolkit and place it in the same directory as the samples. 
 
 
 ## Download Quick Start Edition VM
-See the [Installing Streams Quick Start Edition VM Image|http://ibmstreams.github.io/streamsx.documentation/docs/4.1/qse-install-linux/] for more information.
+See the [Installing Streams Quick Start Edition VM Image](http://ibmstreams.github.io/streamsx.documentation/docs/4.1/qse-install-linux/) for more information.
 
 ## Download Docker
-See the [Installing Streams Docker VM Image|NEED_LINK] for more information
+See the [Installing Streams Docker VM Image - NEED LINK!!!](NEED_LINK) for more information
 
 ## Install Dependencies - VM
 TBD
