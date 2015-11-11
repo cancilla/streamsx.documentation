@@ -48,19 +48,20 @@ The following steps can be taken to download, compile and run the cybersecurity 
  <span class="command">git clone https://github.com/IBMStreams/samples.git</span>
  <span class="command">cd samples/cybersecurity</span>
  <span class="command">ls -l</span>
- <span class="output">DomainProfilingSamples  HostProfilingSamples  PredictiveBlacklistingSamples</span></pre>
+ <span class="output">DomainProfilingSamples  HostProfilingSamples  PredictiveBlacklistingSamples</span>
+ </pre>
  
  2. Navigate to the DomainProfilingSamples directory. The directory contains a build.xml file that will download any necessary dependencies (including the networking toolkit) and compile one of the applications. Run the `ant` command to kick off the build. 
- ~~~~~~
- $ ant 
- ~~~~~~
+ <pre class="terminal">
+ <span class="command">ant</span>
+ </pre>
  
  3. Use the Streams Console to submit the application to the instance. To get the URL for the Streams Console, run the following command:
  
- ~~~~~~
- $ st -d <domain_name> -i <instance_name> geturl
- https://myhost:9222/streams/domain/console
- ~~~~~~
+ <pre class="terminal">
+ <pre class="command">st -d <em>[DOMAIN_NAME]</em> -i <em>[INSTANCE_NAME]</em> geturl</span>
+ <span class="output">https://<em>myhost:9222</em>/streams/domain/console</span>
+ </pre>
  
  4. Once the Streams Console is open, you should be presented with a screen that looks like the following: 
  
