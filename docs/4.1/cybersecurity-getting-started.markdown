@@ -38,22 +38,22 @@ The following steps can be taken to download, compile and run the cybersecurity 
 
  1. From the command-line, clone the samples github repository and navigate to the 'cybersecurity' directory. Here you will find directories containing the sample applications:
  
- ```
- $> git clone https://github.com/IBMStreams/samples.git
- $> cd samples/cybersecurity
- $> ls -l
+ ```ShellSession
+ $ git clone https://github.com/IBMStreams/samples.git
+ $ cd samples/cybersecurity
+ $ ls -l
  DomainProfilingSamples  HostProfilingSamples  PredictiveBlacklistingSamples
  ```
  
  2. Navigate to the DomainProfilingSamples directory. The directory contains a build.xml file that will download any necessary dependencies (including the networking toolkit) and compile one of the applications. Run the `ant` command to kick off the build. 
- ```
- $> ant 
+ ```ShellSession
+ $ ant 
  ```
  
  3. Use the Streams Console to submit the application to the instance. To get the URL for the Streams Console, run the following command:
  
- ```
- $> st -d <domain_name> -i <instance_name> geturl
+ ```ShellSession
+ $ st -d <domain_name> -i <instance_name> geturl
  https://myhost:9222/streams/domain/console
  ```
  
@@ -71,8 +71,8 @@ The following steps can be taken to download, compile and run the cybersecurity 
 ### Analyze Output
 The sample applications will output the results of the analytics to the data directory. There will be two files generated in this directory: 
 
- - *suspicious.txt* - lists the domains that were classified as suspicious
- - *benign.txt* - lists the domains that were classified as benign
+ - **suspicious.txt** - lists the domains that were classified as suspicious
+ - **benign.txt** - lists the domains that were classified as benign
 
 For the DomainProfilingBasic application, only the classified domains are written to the file. However, generally you will want to output additional information, such as the IP addresses of the hosts that accessed these domains. The 'DomainProfilingExtended' sample application demonstrates how to collect a set of the unique IPs that accessed the domain. 
 
