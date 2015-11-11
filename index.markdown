@@ -12,11 +12,13 @@ The goal of the project is to provide easy-to-follow documentation and developme
 {% include nav.html context="/docs/"%}
 
 # Streams InfoCenter
-[Streams 4.0.1 Infocenter](http://www-01.ibm.com/support/knowledgecenter/#!/SSCRJU_4.0.1/com.ibm.streams.welcome.doc/doc/kc-homepage.html)
+* [Streams 4.0.1 Infocenter](http://www-01.ibm.com/support/knowledgecenter/#!/SSCRJU_4.0.1/com.ibm.streams.welcome.doc/doc/kc-homepage.html)
+* [Streams 4.1.0 Infocenter](http://www-01.ibm.com/support/knowledgecenter/#!/SSCRJU_4.1.0/com.ibm.streams.welcome.doc/doc/kc-homepage.html)
 
 # New Documentation
 
 To request new documentation, please open an issue here:
+
    <form action="https://github.com/IBMStreams/streamsx.documentation/issues/new" target="_blank">
   	  <input type="submit" value="New Documentation">
    </form>
