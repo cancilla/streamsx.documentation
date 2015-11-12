@@ -32,7 +32,7 @@ The Quick Start VM requires you to download and build 3 dependencies:
 1. Navigate to (http://ftp.gnu.org/gnu/bison/) and download the latest version of GNU Bison to the Quick Start VM. As of the time of this writing, the latest version of GNU Bison was 3.0. 
 2. Execute the following commands to extract the tarball and run the install:
 
-<pre class="terminate">
+<pre class="terminal">
 <span class="command">tar -xvf bison-3.0.tar.gz</span>
 <span class="command">cd bison-3.0</span>
 <span class="command">./configure</span>
@@ -44,7 +44,7 @@ The Quick Start VM requires you to download and build 3 dependencies:
 1. Navigate to (flex.sourceforge.net) and download the latest version of Flex to the Quick Start VM. When this guide was written, the latest version of flex was 2.5.39.
 2. Execute the following commands to extract the tarball and run the install:
 
-<pre class="terminate">
+<pre class="terminal">
 <span class="command">tar -xvf flex-2.5.39.tar.gz</span>
 <span class="command">cd flex-2.5.39</span>
 <span class="command">./configure</span>
@@ -117,8 +117,8 @@ The following steps can be taken to download, compile and run the cybersecurity 
 ### Analyze Output
 The sample applications will output the results of the analytics to the data directory. There will be two files generated in this directory: 
 
- - **suspicious.txt** - lists the domains that were classified as suspicious
- - **benign.txt** - lists the domains that were classified as benign
+ - **dpresults_suspicious.csv** - lists the domains that were classified as suspicious
+ - **dpresults_benign.csv** - lists the domains that were classified as benign
 
 For the DomainProfilingBasic application, only the classified domains are written to the file. However, generally you will want to output additional information, such as the IP addresses of the hosts that accessed these domains. The 'DomainProfilingExtended' sample application demonstrates how to collect a set of the unique IPs that accessed the domain. 
 
