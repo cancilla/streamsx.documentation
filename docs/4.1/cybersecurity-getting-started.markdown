@@ -69,21 +69,23 @@ The Quick Start VM requires you to download and build 3 dependencies:
 TBD
 
 ## Install SPSS (Optional)
-1. Download and install SPSS Modeler Solution Publisher into the Quick Start VM
-2. Modify the `/home/streamsadmin/.bashrc` file and set the `CLEMRUNTIME` environment variable to the SPSS install path:
+To run the PredictiveBlacklistingSample application, SPSS Modeler Solution Publisher must be installed. In order to download and install this version of SPSS, you must have a license for the product. 
 
-<pre class="terminal">
-<span class="command">echo "export CLEMRUNTIME=/usr/IBM/SPSS/ModelerSolutionPublisher/17.0/" >> /home/streamsadmin/.bashrc</span>
-<span class="command">source ~/.bashrc</span></pre>
+ 1. Download and install SPSS Modeler Solution Publisher into the Quick Start VM
+ 2. Modify the `/home/streamsadmin/.bashrc` file and set the `CLEMRUNTIME` environment variable to the SPSS install path:
+ 
+ <pre class="terminal">
+ <span class="command">echo "export CLEMRUNTIME=/usr/IBM/SPSS/ModelerSolutionPublisher/17.0/" >> /home/streamsadmin/.bashrc</span>
+ <span class="command">source ~/.bashrc</span></pre>
 
-3. Download and extract the **com.ibm.spss.streams.analytics** toolkit using the following commands:
+ 3. Download and extract the **com.ibm.spss.streams.analytics** toolkit using the following commands:
+ 
+ <pre class="terminal">
+ <span class="command">cd Downloads</span>
+ <span class="command">wget https://github.com/IBMPredictiveAnalytics/streamsx.spss.v4/raw/master/com.ibm.spss.streams.analytics.tar.gz</span>
+ <span class="command">tar -xvf com.ibm.spss.streams.analytics.tar.gz</span></pre>
 
-<pre class="terminal">
-<span class="command">cd Downloads</span>
-<span class="command">wget https://github.com/IBMPredictiveAnalytics/streamsx.spss.v4/raw/master/com.ibm.spss.streams.analytics.tar.gz</span>
-<span class="command">tar -xvf com.ibm.spss.streams.analytics.tar.gz</span></pre>
-
-4. At this point, the PredictiveBlacklisting sample application can be compiled using the steps below. 
+ 4. At this point, the PredictiveBlacklisting sample application can be compiled using the steps below. 
 
 **NOTE:** When building the PredictionBlacklistingSample using ant, you must specify the `spss.toolkit.path` property on the command-line and set the value to the toolkit path. For example: `ant -Dspss.toolkit.path=/home/streamsadmin/Downloads/com.ibm.spss.streams.analytics`.
 
@@ -102,13 +104,13 @@ The three introductory sample projects are:
 The following steps can be taken to download, compile and run the cybersecurity samples:
 
  1. From the command-line, clone the samples github repository and navigate to the 'cybersecurity' directory. Here you will find directories containing the sample applications:
- 
- <pre class="terminal">
- <span class="command">git clone https://github.com/IBMStreams/samples.git</span>
- <span class="command">cd samples/cybersecurity</span>
- <span class="command">ls -l</span>
- <span class="output">DomainProfilingSamples  HostProfilingSamples  PredictiveBlacklistingSamples</span></pre>
- 
+  
+  <pre class="terminal">
+  <span class="command">git clone https://github.com/IBMStreams/samples.git</span>
+  <span class="command">cd samples/cybersecurity</span>
+  <span class="command">ls -l</span>
+  <span class="output">DomainProfilingSamples  HostProfilingSamples  PredictiveBlacklistingSamples</span></pre>
+  
  2. Navigate to the DomainProfilingSamples directory. The directory contains a build.xml file that will download any necessary dependencies (including the networking toolkit) and compile one of the applications. Run the `ant` command to kick off the build.
  
  <pre class="terminal">
@@ -124,8 +126,14 @@ The following steps can be taken to download, compile and run the cybersecurity 
  
  ***INSERT IMAGE OF STREAMS CONSOLE*** 
 
- 5. At the top of the Streams Console, click the "Submit Job" button. Select the *.sab file found in the 'output/' directory in the sample application. For example, for the DomainProfilingSample application, you would select this file: `/path/to/DomainProfilingSample/output/DomainProfilingBasic_Output/com.ibm.streams.cybersecurity.sample.DomainProfilingBasic.sab`
+ 5. At the top of the Streams Console, switch to the Application Dashboard, which allows you submit, cancel and monitor applications. 
+
+ ***INSERT IMAGE OF STREAMS CONSOLE DASHBOARD SWITCH***
+
+ 5. With the Application Dashboard open, click the **Submit Job** icon ***INSERT IMAGE OF ICON***. Select the *.sab file found in the 'output/' directory in the sample application. For example, for the DomainProfilingSample application, you would select this file: `/path/to/DomainProfilingSample/output/DomainProfilingBasic_Output/com.ibm.streams.cybersecurity.sample.DomainProfilingBasic.sab`
  
+ ***INSERT OF IMAGE OF JOB SUBMISSION DIALOG***
+
  6. Once the application has been submitted, the Streams Console should display the running application:
  
  ***INSERT IMAGE OF STREAMS CONSOLE WITH APP RUNNING***
