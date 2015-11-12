@@ -21,7 +21,49 @@ See the [Installing Streams Quick Start Edition VM Image](http://ibmstreams.gith
 See the [Installing Streams Docker VM Image - NEED LINK!!!](NEED_LINK) for more information
 
 ## Install Dependencies - VM
-TBD
+The Quick Start VM requires you to download and build 3 dependencies:
+
+- GNU Bison
+- Flex
+- libpcap
+ 
+ 
+##### GNU Bison
+1. Navigate to (http://ftp.gnu.org/gnu/bison/) and download the latest version of GNU Bison to the Quick Start VM. As of the time of this writing, the latest version of GNU Bison was 3.0. 
+2. Execute the following commands to extract the tarball and run the install:
+
+<pre class="terminate">
+<span class="command">tar -xvf bison-3.0.tar.gz</span>
+<span class="command">cd bison-3.0</span>
+<span class="command">./configure</span>
+<span class="command">make</span>
+<span class="command">sudo make install</span></pre>
+
+
+##### Flex
+1. Navigate to (flex.sourceforge.net) and download the latest version of Flex to the Quick Start VM. When this guide was written, the latest version of flex was 2.5.39.
+2. Execute the following commands to extract the tarball and run the install:
+
+<pre class="terminate">
+<span class="command">tar -xvf flex-2.5.39.tar.gz</span>
+<span class="command">cd flex-2.5.39</span>
+<span class="command">./configure</span>
+<span class="command">make</span>
+<span class="command">sudo make install</span></pre>
+
+
+##### libpcap
+1. Navigate to (http://www.tcpdump.org) and download the latest version of libpcap to the Quick Start VM. When this guide was written, the latest version of libpcap was 1.7.4.
+2. Execute the following commands to extract the tarball and run the install:
+
+<pre class="terminal">
+<span class="command">tar -xvf libpcap-1.7.4.tar.gz</span>
+<span class="command">cd libpcap-1.7.4</span>
+<span class="command">./configure</span>
+<span class="command">make</span>
+<span class="command">sudo make install</span></pre>
+
+
 
 ## Install Dependencies - Docker
 TBD
