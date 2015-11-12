@@ -69,7 +69,20 @@ The Quick Start VM requires you to download and build 3 dependencies:
 TBD
 
 ## Install SPSS (Optional)
-TBD
+1. Download and install SPSS Modeler Solution Publisher into the Quick Start VM
+2. Modify the `/home/streamsadmin/.bashrc` file and set the `CLEMRUNTIME` environment variable to the SPSS install path:
+
+<pre class="terminal">
+<span class="command">echo "export CLEMRUNTIME=/usr/IBM/SPSS/ModelerSolutionPublisher/17.0/" >> /home/streamsadmin/.bashrc</span>
+<span class="command">source ~/.bashrc</span></pre>
+
+3. Navigate to the SPSS install path and extract the com.ibm.spss.streams.analytics toolkit. The following commands will install the toolkit to `$CLEMRUNTIME/InfoSphere/com.ibm.spss.streams.analytics`:
+
+<pre class="terminal">
+<span class="command">cd $CLEMRUNTIME/InfoSphere</span>
+<span class="command">sudo ./installToolkit.sh .</span></pre>
+
+4. At this point, the PredictiveBlacklisting sample application will compile and run using the steps below.
 
 ## Sample Applications
 The cybersecurity toolkit sample applications should be used as a baseline for building cybersecurity applications on Streams. The samples contain the necessary filter and enrichment operators that allow the analytics to work properly. 
