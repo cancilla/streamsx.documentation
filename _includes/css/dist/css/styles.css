@@ -89,7 +89,7 @@ color:#333;
 }
 
 .terminal .command:before {
-	content: "$> ";
+	content: "$ ";
 	color : #77DD77;
 }
 
