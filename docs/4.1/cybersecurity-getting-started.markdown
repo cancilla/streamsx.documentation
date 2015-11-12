@@ -76,13 +76,17 @@ TBD
 <span class="command">echo "export CLEMRUNTIME=/usr/IBM/SPSS/ModelerSolutionPublisher/17.0/" >> /home/streamsadmin/.bashrc</span>
 <span class="command">source ~/.bashrc</span></pre>
 
-3. Navigate to the SPSS install path and extract the com.ibm.spss.streams.analytics toolkit. The following commands will install the toolkit to `$CLEMRUNTIME/InfoSphere/com.ibm.spss.streams.analytics`:
+3. Download and extract the **com.ibm.spss.streams.analytics** toolkit using the following commands:
 
 <pre class="terminal">
-<span class="command">cd $CLEMRUNTIME/InfoSphere</span>
-<span class="command">sudo ./installToolkit.sh .</span></pre>
+<span class="command">cd Downloads</span>
+<span class="command">wget https://github.com/IBMPredictiveAnalytics/streamsx.spss.v4/raw/master/com.ibm.spss.streams.analytics.tar.gz</span>
+<span class="command">tar -xvf com.ibm.spss.streams.analytics.tar.gz</span></pre>
 
-4. At this point, the PredictiveBlacklisting sample application will compile and run using the steps below.
+4. At this point, the PredictiveBlacklisting sample application can be compiled using the steps below. 
+
+**NOTE:** When building the PredictionBlacklistingSample using ant, you must specify the `spss.toolkit.path` property on the command-line and set the value to the toolkit path. For example: `ant -Dspss.toolkit.path=/home/streamsadmin/Downloads/com.ibm.spss.streams.analytics`.
+
 
 ## Sample Applications
 The cybersecurity toolkit sample applications should be used as a baseline for building cybersecurity applications on Streams. The samples contain the necessary filter and enrichment operators that allow the analytics to work properly. 
