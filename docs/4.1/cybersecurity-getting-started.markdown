@@ -29,7 +29,7 @@ The Quick Start VM requires you to download and build 3 dependencies:
  
  
 #### GNU Bison
-1. Navigate to (http://ftp.gnu.org/gnu/bison/) and download the latest version of GNU Bison to the Quick Start VM. As of the time of this writing, the latest version of GNU Bison was 3.0. 
+1. Navigate to [http://ftp.gnu.org/gnu/bison/](http://ftp.gnu.org/gnu/bison/) and download the latest version of GNU Bison to the Quick Start VM. As of the time of this writing, the latest version of GNU Bison was 3.0. 
 2. Execute the following commands to extract the tarball and run the install:
 
 <pre class="terminal">
@@ -41,7 +41,7 @@ The Quick Start VM requires you to download and build 3 dependencies:
 
 
 #### Flex
-1. Navigate to (flex.sourceforge.net) and download the latest version of Flex to the Quick Start VM. When this guide was written, the latest version of flex was 2.5.39.
+1. Navigate to [http://flex.sourceforge.net](http://flex.sourceforge.net) and download the latest version of Flex to the Quick Start VM. When this guide was written, the latest version of flex was 2.5.39.
 2. Execute the following commands to extract the tarball and run the install:
 
 <pre class="terminal">
@@ -53,7 +53,7 @@ The Quick Start VM requires you to download and build 3 dependencies:
 
 
 #### libpcap
-1. Navigate to (http://www.tcpdump.org) and download the latest version of libpcap to the Quick Start VM. When this guide was written, the latest version of libpcap was 1.7.4.
+1. Navigate to [http://www.tcpdump.org](http://www.tcpdump.org) and download the latest version of libpcap to the Quick Start VM. When this guide was written, the latest version of libpcap was 1.7.4.
 2. Execute the following commands to extract the tarball and run the install:
 
 <pre class="terminal">
